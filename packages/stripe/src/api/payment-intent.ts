@@ -11,7 +11,15 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
 
-  const { amount, currency } = await request.json();
+  const data = await request.json();
+  const { amount, currency } = data as { amount: number; currency: string };
+
+  if (!amount || !currency) {
+    return NextResponse.json(
+      { error: "Invalid request data" },
+      { status: 400 },
+    );
+  }
 
   try {
     const paymentIntent = await createPaymentIntent(user.id, amount, currency);
