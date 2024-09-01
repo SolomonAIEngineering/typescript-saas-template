@@ -27,7 +27,7 @@
     "prepare": "husky"
   },
   "lint-staged": {
-    "*": ["biome format --write"],
+    "*": ["cspell --no-must-find-files", "biome format --write"],
     "**/*.{md,mdx}": ["markdownlint"]
   },
   "config": {
