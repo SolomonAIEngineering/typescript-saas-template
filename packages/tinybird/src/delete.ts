@@ -1,4 +1,5 @@
 import { getTinybirdClient } from "./client";
+import fetch from "node-fetch";
 
 async function deleteFromDatasource(
   datasource: string,

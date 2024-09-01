@@ -10,6 +10,7 @@ ignorePaths:
   - .husky
   - package-lock.json
   - package.json
+  - services
 words:
   - asynciterable
   - Tinybird

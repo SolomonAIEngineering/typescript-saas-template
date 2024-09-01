@@ -1,0 +1,12 @@
+{
+  "name": "@v1/auth",
+  "version": "1.0.0",
+  "main": "src/index.ts",
+  "dependencies": {
+    "@v1/supabase": "workspace:*",
+    "next": "^13.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.0"
+  }
+}
