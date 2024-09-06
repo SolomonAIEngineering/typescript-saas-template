@@ -4,10 +4,7 @@ import { NextResponse } from "next/server";
 import { createCheckoutSessionSchema } from "../types";
 
 export async function POST(request: Request) {
-  const {
-    data: { user },
-  } = await getUser();
-
+  const user = await getUser();
   if (!user) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }

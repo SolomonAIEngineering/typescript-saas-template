@@ -29,7 +29,7 @@ export async function createCustomer(
     // Insert into users table
     await supabase
       .from("users")
-      .upsert({ id: userId, full_name: fullName }, { onConflict: "id" });
+      .upsert({ id: userId, email, full_name: fullName }, { onConflict: "id" });
 
     // Insert into customers table
     await supabase

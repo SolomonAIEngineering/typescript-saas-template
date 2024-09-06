@@ -190,3 +190,37 @@ export interface PriceWithProductAndSubscriptions extends EnhancedPrice {
 export interface ProductWithPrices extends EnhancedProduct {
   prices: EnhancedPrice[];
 }
+
+// New payment types
+
+/** Represents a payment record from the 'payments' table */
+export type Payment = Tables<"payments">;
+/** Represents the data structure for inserting a new payment */
+export type PaymentInsert = TablesInsert<"payments">;
+/** Represents the data structure for updating a payment */
+export type PaymentUpdate = TablesUpdate<"payments">;
+
+/** Enhanced payment type with specific field definitions and optional related data */
+export interface EnhancedPayment extends Payment {
+  id: UUID;
+  customer_id: UUID;
+  stripe_payment_intent_id: string;
+  amount: number;
+  currency: string;
+  status: string;
+  created_at: DateString;
+  updated_at: Nullable<DateString>;
+  /** Optional customer associated with the payment */
+  customer?: EnhancedCustomer;
+}
+
+// Add to join types
+/** Represents a payment with its associated customer */
+export interface PaymentWithCustomer extends EnhancedPayment {
+  customer: EnhancedCustomer;
+}
+
+/** Represents a customer with their payments */
+export interface CustomerWithPayments extends EnhancedCustomer {
+  payments: EnhancedPayment[];
+}

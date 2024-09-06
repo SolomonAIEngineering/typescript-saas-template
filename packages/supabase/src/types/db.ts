@@ -35,6 +35,47 @@ export type Database = {
           },
         ];
       };
+      payments: {
+        Row: {
+          amount: number | null;
+          created_at: string;
+          currency: string | null;
+          customer_id: string | null;
+          id: string;
+          status: string | null;
+          stripe_payment_intent_id: string | null;
+          updated_at: string | null;
+        };
+        Insert: {
+          amount?: number | null;
+          created_at?: string;
+          currency?: string | null;
+          customer_id?: string | null;
+          id?: string;
+          status?: string | null;
+          stripe_payment_intent_id?: string | null;
+          updated_at?: string | null;
+        };
+        Update: {
+          amount?: number | null;
+          created_at?: string;
+          currency?: string | null;
+          customer_id?: string | null;
+          id?: string;
+          status?: string | null;
+          stripe_payment_intent_id?: string | null;
+          updated_at?: string | null;
+        };
+        Relationships: [
+          {
+            foreignKeyName: "payments_customer_id_fkey";
+            columns: ["customer_id"];
+            isOneToOne: false;
+            referencedRelation: "customers";
+            referencedColumns: ["id"];
+          },
+        ];
+      };
       posts: {
         Row: {
           content: string;

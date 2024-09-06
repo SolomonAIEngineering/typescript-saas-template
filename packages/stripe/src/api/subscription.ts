@@ -4,9 +4,7 @@ import { NextResponse } from "next/server";
 import { createSubscriptionSchema, manageSubscriptionSchema } from "../types";
 
 export async function POST(request: Request) {
-  const {
-    data: { user },
-  } = await getUser();
+  const user = await getUser();
 
   if (!user) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
@@ -31,9 +29,7 @@ export async function POST(request: Request) {
 }
 
 export async function PATCH(request: Request) {
-  const {
-    data: { user },
-  } = await getUser();
+  const user = await getUser();
 
   if (!user) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });

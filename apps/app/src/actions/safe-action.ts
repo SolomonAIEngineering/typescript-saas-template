@@ -74,9 +74,7 @@ export const authActionClient = actionClientWithMeta
     });
   })
   .use(async ({ next, metadata }) => {
-    const {
-      data: { user },
-    } = await getUser();
+    const user = await getUser();
     const supabase = createClient();
 
     if (!user) {
