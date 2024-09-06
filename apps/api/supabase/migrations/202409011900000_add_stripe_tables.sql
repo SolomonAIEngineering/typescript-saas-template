@@ -1,15 +1,6 @@
 -- Enable UUID extension
 CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 
--- Create users table (if not already exists)
-CREATE TABLE IF NOT EXISTS users (
-  id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
-  full_name TEXT,
-  avatar_url TEXT,
-  billing_address JSONB,
-  payment_method JSONB
-);
-
 -- Create customers table
 CREATE TABLE customers (
   id UUID PRIMARY KEY REFERENCES users(id),

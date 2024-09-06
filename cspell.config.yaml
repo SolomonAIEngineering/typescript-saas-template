@@ -12,6 +12,7 @@ ignorePaths:
   - package.json
   - services
 words:
+  - fkey
   - vercel
   - reauthentication
   - asynciterable

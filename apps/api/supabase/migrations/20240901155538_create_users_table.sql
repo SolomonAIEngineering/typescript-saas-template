@@ -6,7 +6,9 @@ create table public.users (
     avatar_url text,
     created_at timestamp with time zone default now(),
     updated_at timestamp with time zone default now(),
-    constraint fk_auth_user foreign key (id) references auth.users(id) on delete cascade
+    constraint fk_auth_user foreign key (id) references auth.users(id) on delete cascade,
+    billing_address JSONB,
+    payment_method JSONB
 );
 
 -- enable row level security (rls)
