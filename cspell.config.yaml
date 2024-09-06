@@ -12,7 +12,14 @@ ignorePaths:
   - package.json
   - services
 words:
+  - vercel
+  - reauthentication
   - asynciterable
+  - OPENPANEL
+  - nuqs
+  - cursorrules
+  - topo
+  - OPENPANEL
   - Tinybird
   - datasource
   - TINYBIRD

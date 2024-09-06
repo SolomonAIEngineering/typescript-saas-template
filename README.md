@@ -42,7 +42,7 @@ Everything you need to build a production ready SaaS, it's a opinionated stack b
 
 ## Directory Structure
 
-```
+```bash
 .
 ├── apps                         # App workspace
 │    ├── api                     # Supabase (API, Auth, Storage, Realtime, Edge Functions)
@@ -95,7 +95,10 @@ bun i
 2. Copy `.env.example` to `.env` and update the variables.
 
 ```sh
-cp .env.example .env
+# Copy .env.example to .env for each app
+cp apps/api/.env.example apps/api/.env
+cp apps/app/.env.example apps/app/.env
+cp apps/web/.env.example apps/web/.env
 ```
 
 4. Start the development server from either bun or turbo:
@@ -106,6 +109,10 @@ bun dev:web // starts the web app in development mode
 bun dev:app // starts the app in development mode
 bun dev:api // starts the api in development mode
 bun dev:email // starts the email app in development mode
+
+// Database
+bun migrate // run migrations
+bun seed // run seed
 ```
 
 ## How to use

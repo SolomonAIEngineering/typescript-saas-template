@@ -11,24 +11,22 @@ import {
 import { headers } from "next/headers";
 import { z } from "zod";
 
-export const actionClient = createSafeActionClient({
-  handleReturnedServerError(e) {
-    if (e instanceof Error) {
-      return e.message;
-    }
+const handleServerError = (e: Error) => {
+  console.error("Action error:", e.message);
 
-    return DEFAULT_SERVER_ERROR_MESSAGE;
-  },
+  if (e instanceof Error) {
+    return e.message;
+  }
+
+  return DEFAULT_SERVER_ERROR_MESSAGE;
+};
+
+export const actionClient = createSafeActionClient({
+  handleServerError,
 });
 
 export const actionClientWithMeta = createSafeActionClient({
-  handleReturnedServerError(e) {
-    if (e instanceof Error) {
-      return e.message;
-    }
-
-    return DEFAULT_SERVER_ERROR_MESSAGE;
-  },
+  handleServerError,
   defineMetadataSchema() {
     return z.object({
       name: z.string(),
@@ -47,9 +45,9 @@ export const authActionClient = actionClientWithMeta
     const result = await next({ ctx: {} });
 
     if (process.env.NODE_ENV === "development") {
-      logger("Input ->", clientInput);
-      logger("Result ->", result.data);
-      logger("Metadata ->", metadata);
+      logger.info(`Input -> ${JSON.stringify(clientInput)}`);
+      logger.info(`Result -> ${JSON.stringify(result.data)}`);
+      logger.info(`Metadata -> ${JSON.stringify(metadata)}`);
 
       return result;
     }

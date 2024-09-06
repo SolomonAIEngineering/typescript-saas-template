@@ -14,6 +14,7 @@
     "clean:workspaces": "turbo clean",
     "dev": "turbo dev --parallel",
     "dev:web": "turbo dev --filter=@v1/web",
+    "dev:jobs": "turbo jobs --filter=@v1/jobs",
     "dev:app": "turbo dev --filter=@v1/app",
     "start:web": "turbo start --filter=@v1/web",
     "start:app": "turbo start --filter=@v1/app",
@@ -33,7 +34,7 @@
       "path": "@commitlint/cz-commitlint"
     }
   },
-  "dependencies": {
+  "devDependencies": {
     "@biomejs/biome": "1.8.3",
     "@changesets/cli": "^2.27.7",
     "@commitlint/cli": "^19.3.0",
@@ -52,10 +53,8 @@
     "stripe": "^16.9.0",
     "turbo": "2.1.1",
     "typescript": "^5.5.4",
-    "yargs": "^17.7.2"
-  },
-  "packageManager": "bun@1.1.26",
-  "devDependencies": {
+    "yargs": "^17.7.2",
     "husky": "^9.1.5"
-  }
+  },
+  "packageManager": "bun@1.1.26"
 }
