@@ -1,5 +1,5 @@
-import { getTinybird } from "./tinybird";
-import { emailEventSchema, EmailEvent } from "./types";
+import { getTinybird } from "./tinybird.ts";
+import { emailEventSchema, EmailEvent } from "./types/index.ts";
 
 const tb = getTinybird();
 
@@ -8,4 +8,4 @@ export const publishEmailEvent = tb?.buildIngestEndpoint({
   event: emailEventSchema,
 });
 
-export { EmailEvent };
+export type { EmailEvent };

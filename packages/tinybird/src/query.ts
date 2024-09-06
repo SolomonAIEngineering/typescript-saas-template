@@ -1,6 +1,6 @@
 import { z } from "zod";
-import { getTinybird } from "./tinybird";
-import { activitySummarySchema } from "./types";
+import { getTinybird } from "./tinybird.ts";
+import { activitySummarySchema } from "./types/index.ts";
 
 const tb = getTinybird();
 

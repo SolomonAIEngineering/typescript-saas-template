@@ -1,5 +1,5 @@
 {
-  "extends": "tsconfig/base.json",
+  "extends": "@v1/typescript/base.json",
   "exclude": ["node_modules"],
   "compilerOptions": {}
 }

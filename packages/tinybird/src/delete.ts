@@ -1,4 +1,4 @@
-import { getTinybirdClient } from "./client";
+import { getTinybirdClient } from "./client.ts";
 import fetch from "node-fetch";
 
 async function deleteFromDatasource(

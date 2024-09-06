@@ -1,5 +1,10 @@
 {
-  "extends": "tsconfig/base.json",
+  "extends": "@v1/typescript/base.json",
+  "include": ["src"],
   "exclude": ["node_modules"],
-  "compilerOptions": {}
+  "compilerOptions": {
+    "moduleResolution": "NodeNext",
+    "allowImportingTsExtensions": true,
+    "noEmit": true
+  }
 }

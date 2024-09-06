@@ -1,0 +1,10 @@
+{
+  "extends": "@v1/typescript/base.json",
+  "exclude": ["node_modules"],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@v1/tinybird/*": ["./src/*"]
+    }
+  }
+}
