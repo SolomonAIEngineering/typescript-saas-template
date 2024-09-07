@@ -1,5 +1,5 @@
 {
-  "name": "@portkey-ai/gateway",
+  "name": "@v1/gateway",
   "version": "1.7.3",
   "description": "A fast AI gateway by Portkey",
   "repository": {

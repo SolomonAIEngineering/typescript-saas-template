@@ -10,12 +10,12 @@ export const GET = routes.withCookies(
     cookieStore: ReturnType<typeof cookies>,
   ) => {
     try {
-      // Call the checkout function with the request object
-      const result = await handleAuthCallback(request);
+      // Call the handleAuthCallback function with the request object
+      const result = await handleAuthCallback(request as any);
       // The result should already be a NextResponse object
       return result;
     } catch (error) {
-      console.error("Error in checkout route:", error);
+      console.error("Error in auth callback route:", error);
       return NextResponse.json(
         { error: "Internal Server Error" },
         { status: 500 },

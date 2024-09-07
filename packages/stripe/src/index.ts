@@ -7,6 +7,8 @@ import {
   type Product,
   type Price,
   type Subscription,
+  createCustomerSchema,
+  createCheckoutSessionSchema,
 } from "./types";
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
@@ -255,3 +257,4 @@ export async function manageSubscription(
 }
 
 export { routes };
+export { createCustomerSchema, createCheckoutSessionSchema };

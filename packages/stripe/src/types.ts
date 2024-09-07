@@ -139,3 +139,7 @@ export const createCheckoutSessionSchema = z.object({
   /** Additional metadata for the checkout session */
   metadata: z.record(z.string()).optional(),
 });
+
+export const createCustomerSchema = z.object({
+  fullName: z.string(),
+});

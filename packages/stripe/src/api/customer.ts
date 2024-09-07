@@ -1,13 +1,9 @@
 import { createCustomer } from "../index";
 import { getUser } from "@v1/supabase/queries";
-import { NextResponse } from "next/server";
-import { z } from "zod";
+import { NextRequest, NextResponse } from "next/server";
+import { createCustomerSchema } from "../types";
 
-const createCustomerSchema = z.object({
-  fullName: z.string(),
-});
-
-export async function POST(request: Request) {
+export async function POST(request: NextRequest) {
   const user = await getUser();
 
   if (!user) {

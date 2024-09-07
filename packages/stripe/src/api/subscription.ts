@@ -2,8 +2,9 @@ import { createSubscription, manageSubscription } from "../index";
 import { getUser } from "@v1/supabase/queries";
 import { NextResponse } from "next/server";
 import { createSubscriptionSchema, manageSubscriptionSchema } from "../types";
+import { NextRequest } from "next/server";
 
-export async function POST(request: Request) {
+export async function POST(request: NextRequest) {
   const user = await getUser();
 
   if (!user) {
@@ -28,7 +29,7 @@ export async function POST(request: Request) {
   }
 }
 
-export async function PATCH(request: Request) {
+export async function PATCH(request: NextRequest) {
   const user = await getUser();
 
   if (!user) {

@@ -11,14 +11,14 @@ import {
   SubscriptionWithUserAndPrice,
   ProductWithPrices,
 } from "../types/db-types";
-
+import { cookies } from "next/headers";
 const supabase = createClient();
-
 /**
  * Retrieves the currently authenticated user.
  * @returns The user data or null if not authenticated.
  */
-export async function getUser() {
+export async function getUser(cookieStore?: ReturnType<typeof cookies>) {
+  const supabase = createClient(cookieStore);
   try {
     const {
       data: { user },

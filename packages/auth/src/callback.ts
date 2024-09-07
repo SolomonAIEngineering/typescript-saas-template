@@ -1,7 +1,7 @@
 import { createClient } from "@v1/supabase/server";
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 
-export async function handleAuthCallback(request: Request) {
+export async function handleAuthCallback(request: NextRequest) {
   const { searchParams, origin } = new URL(request.url);
   const code = searchParams.get("code");
   const next = searchParams.get("next") ?? "/";

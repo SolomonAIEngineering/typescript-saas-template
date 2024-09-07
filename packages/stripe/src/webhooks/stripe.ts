@@ -2,12 +2,12 @@ import { NextResponse } from "next/server";
 import Stripe from "stripe";
 import { createClient } from "@v1/supabase/server";
 import { logger } from "@v1/logger";
-
+import { NextRequest } from "next/server";
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
   apiVersion: "2022-11-15",
 });
 
-export async function POST(request: Request) {
+export async function POST(request: NextRequest) {
   const body = await request.text();
   const signature = request.headers.get("stripe-signature") as string;
 

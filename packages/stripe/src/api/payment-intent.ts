@@ -1,8 +1,9 @@
 import { createPaymentIntent } from "../index";
 import { getUser } from "@v1/supabase/queries";
 import { NextResponse } from "next/server";
+import { NextRequest } from "next/server";
 
-export async function POST(request: Request) {
+export async function POST(request: NextRequest) {
   const user = await getUser();
   if (!user) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
