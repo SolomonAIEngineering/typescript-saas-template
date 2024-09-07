@@ -4,7 +4,7 @@
   "workspaces": ["packages/*", "apps/*", "tooling/*", "services/*"],
   "scripts": {
     "commit": "git-cz",
-    "lint:md": "markdownlint \"**/*.md\" --dot --ignore node_modules --ignore .changeset --ignore services/gateway --ignore .github",
+    "lint:md": "markdownlint \"**/*.md\" --dot --ignore node_modules --ignore .changeset --ignore services --ignore .github",
     "lint:spell": "cspell \"**\" --gitignore --dot --no-progress --cache --unique ",
     "release": "turbo run build lint typecheck && changeset version && changeset publish",
     "reset:changelog": "bun run rm -rf */**/CHANGELOG.md",

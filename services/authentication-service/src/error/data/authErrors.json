@@ -1,0 +1,26 @@
+{
+  "Unauthenticated": {
+    "message": "You need to login to access this resource",
+    "devMessage": "User is not authenticated"
+  },
+  "Unauthorized": {
+    "message": "Sorry, you are not authorized to access this resource",
+    "devMessage": "User is not authorized to access this resource"
+  },
+  "AUTH-001": {
+    "message": "",
+    "devMessage": "This email registered before"
+  },
+  "AUTH-002": {
+    "message": "",
+    "devMessage": "Invalid email or password"
+  },
+  "AUTH-003": {
+    "message": "",
+    "devMessage": "Email not confirmed"
+  },
+  "AUTH-004": {
+    "message": "",
+    "devMessage": "Old Password is incorrect while changing password"
+  }
+}
