@@ -1,5 +1,5 @@
 {
-  "name": "@v1/template-service",
+  "name": "@v1/account-service",
   "version": "0.0.1",
   "private": true,
   "base": ".",

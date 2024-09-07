@@ -1,5 +1,5 @@
 {
-  "name": "cf-worker-supabase-boilerplate",
+  "name": "@v1/authentication-service",
   "version": "0.0.0",
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20230419.0",
