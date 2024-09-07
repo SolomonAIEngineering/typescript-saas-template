@@ -1,3 +1,6 @@
+-- Set the working directory context
+\cd :working_directory
+
 -- Create payments table
 CREATE TABLE payments (
   id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
@@ -21,3 +24,6 @@ CREATE INDEX idx_payments_customer_id ON payments(customer_id);
 
 -- Create index on stripe_payment_intent_id for faster lookups
 CREATE INDEX idx_payments_stripe_payment_intent_id ON payments(stripe_payment_intent_id);
+
+-- Reset the working directory
+\cd :previous_working_directory

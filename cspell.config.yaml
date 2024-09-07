@@ -12,7 +12,18 @@ ignorePaths:
   - package.json
   - services
 words:
+  - Buildx
+  - rerank
+  - buildx
+  - ORGANISATION
   - fkey
+  - portkey
+  - codecurl
+  - Anyscale
+  - Portkey
+  - loadbalance
+  - Langchain
+  - Rubeus
   - vercel
   - reauthentication
   - asynciterable

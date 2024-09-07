@@ -4,7 +4,7 @@
   "workspaces": ["packages/*", "apps/*", "tooling/*", "services/*"],
   "scripts": {
     "commit": "git-cz",
-    "lint:md": "markdownlint \"**/*.md\" --dot --ignore node_modules --ignore .changeset",
+    "lint:md": "markdownlint \"**/*.md\" --dot --ignore node_modules --ignore .changeset --ignore services/gateway --ignore .github",
     "lint:spell": "cspell \"**\" --gitignore --dot --no-progress --cache --unique ",
     "release": "turbo run build lint typecheck && changeset version && changeset publish",
     "reset:changelog": "bun run rm -rf */**/CHANGELOG.md",
@@ -23,11 +23,12 @@
     "lint": "turbo lint && manypkg check",
     "typecheck": "turbo typecheck",
     "prepare": "husky",
-    "gen": "turbo gen --config 'turbo/generator/config.ts'"
+    "gen": "turbo gen --config 'turbo/generator/config.ts'",
+    "gateway:format": "cd services/gateway && bun run format:check || (bun run format && return 1) && cd ../../"
   },
   "lint-staged": {
     "*": ["cspell --no-must-find-files", "biome format --write"],
-    "**/*.{md,mdx}": ["markdownlint"]
+    "**/*.{md,mdx}": ["bun run lint:md"]
   },
   "config": {
     "commitizen": {

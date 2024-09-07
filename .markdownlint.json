@@ -4,5 +4,11 @@
   "no-inline-html": false,
   "no-space-in-emphasis": false,
   "no-duplicate-heading": false,
-  "code-block-style": false
+  "code-block-style": false,
+  "ignore": [
+    "**/*.svg",
+    "services/**/*.md",
+    "gateway/**/*.md",
+    "**/.github/*.md"
+  ]
 }
