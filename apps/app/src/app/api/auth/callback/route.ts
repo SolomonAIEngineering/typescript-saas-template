@@ -1,7 +1,7 @@
 import { handleAuthCallback } from "@v1/auth";
 import { routes } from "@v1/stripe";
-import { cookies } from "next/headers";
-import { NextRequest, NextResponse } from "next/server";
+import type { cookies } from "next/headers";
+import { type NextRequest, NextResponse } from "next/server";
 
 export const GET = routes.withCookies(
   async (

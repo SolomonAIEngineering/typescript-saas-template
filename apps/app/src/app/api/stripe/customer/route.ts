@@ -1,6 +1,6 @@
-import { NextRequest, NextResponse } from "next/server";
+import { type NextRequest, NextResponse } from "next/server";
 import { routes } from "@v1/stripe";
-import { cookies } from "next/headers";
+import type { cookies } from "next/headers";
 
 export const POST = routes.withCookies(
   async (
