@@ -2,7 +2,12 @@ import Stripe from "stripe";
 import { logger } from "@v1/logger";
 import { createClient } from "@v1/supabase/server";
 import { routes } from "./routes";
-import { UserDetails, Product, Price, Subscription } from "./types";
+import {
+  UserDetails,
+  type Product,
+  type Price,
+  type Subscription,
+} from "./types";
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
   apiVersion: "2022-11-15",
@@ -212,7 +217,7 @@ export async function getPrices(): Promise<Price[]> {
 export async function createCheckoutSession(
   customerId: string,
   price: string,
-  quantity: number = 1,
+  quantity = 1,
   metadata?: { [key: string]: string },
 ) {
   const checkoutSession = await stripe.checkout.sessions.create({
