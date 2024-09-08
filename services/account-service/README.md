@@ -28,7 +28,7 @@ This project demonstrates a Cloudflare Worker implementation using OpenAPI 3.1 w
    wrangler deploy
    ```
 
-## Project Structure
+## Project Structure (WIP)
 
 - `src/index.ts`: Main application entry point
 - `src/endpoints/`: Individual endpoint definitions
