@@ -4,7 +4,7 @@ import {
   EventSpecification,
   TriggerClient,
 } from "@trigger.dev/sdk";
-import { exampleJob } from "./base/basic";
+import { exampleJob } from "./basic/basic";
 
 // Define a type for the job output
 type JobOutput = {
