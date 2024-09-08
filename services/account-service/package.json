@@ -33,7 +33,8 @@
     "create-d1-database": "wrangler d1 create database",
     "create-namespace-queue-results": "wrangler kv:namespace create QUEUE_RESULTS",
     "create-namespace-kv-namespace": "wrangler kv:namespace create KV_NAMESPACE",
-    "create-namespace-r2-bucket": "wrangler r2 bucket create template-service-bucket"
+    "create-namespace-r2-bucket": "wrangler r2 bucket create template-service-bucket",
+    "trigger": "bunx @trigger.dev/cli@latest dev --client-id hono-client -p 8787 -H localhost"
   },
   "dependencies": {
     "@axiomhq/js": "^1.1.1",
@@ -42,9 +43,12 @@
     "@cloudflare/vitest-pool-workers": "^0.4.24",
     "@hono/swagger-ui": "^0.4.0",
     "@hono/zod-openapi": "^0.15.3",
+    "@trigger.dev/hono": "^2.3.19",
+    "@trigger.dev/sdk": "^2.3.19",
     "base-x": "^5.0.0",
     "drizzle-kit": "^0.24.0",
     "drizzle-orm": "^0.33.0",
+    "format": "^0.2.2",
     "hono": "^4.5.8",
     "vitest": "1.5.0"
   },

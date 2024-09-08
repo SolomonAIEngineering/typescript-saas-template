@@ -28,4 +28,7 @@ export type Bindings = {
     | "production";
   VERSION: string;
   EMIT_METRICS_LOGS: boolean;
+  TRIGGER_API_KEY: string;
+  TRIGGER_API_URL: string;
+  TRIGGER_CLIENT_ID: string;
 };

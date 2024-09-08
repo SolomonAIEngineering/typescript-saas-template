@@ -5,6 +5,7 @@ import { HonoEnv } from "../hono/index.js";
 import { LoggerSingleton, LogSchema } from "../logger/index.js";
 import { Metrics, NoopMetrics } from "../metrics/index.js";
 import { LogdrainMetrics } from "../metrics/logdrain.js";
+import { TriggerClientWrapper } from "../jobs/client.js";
 
 /**
  * These maps persist between worker executions and are used for caching
@@ -52,10 +53,18 @@ export function init(): MiddlewareHandler<HonoEnv> {
         })
       : new NoopMetrics();
 
+    // initialize trigger client
+    const client = new TriggerClientWrapper(
+      c.env.TRIGGER_CLIENT_ID,
+      c.env.TRIGGER_API_KEY,
+      c.env.TRIGGER_API_URL,
+    ).getClient();
+
     c.set("services", {
       db,
       metrics,
       logger,
+      triggerClient: client,
     });
 
     await next();
