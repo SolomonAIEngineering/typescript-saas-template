@@ -1,4 +1,4 @@
-name: Release Template Service
+name: Release Account Service
 
 on:
   push:
