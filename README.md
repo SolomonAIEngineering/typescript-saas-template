@@ -4,7 +4,7 @@
 <p align="center">
 	<h1 align="center"><b>Typescript SaaS Template</b></h1>
 <p align="center">
-    An open-source starter kit based on <a href="https://midday.ai">Midday</a>.
+    An open-source starter kit based on <a href="https://midday.ai">Midday & V1</a>.
     <br />
     <br />
     <a href="https://v1.run"><strong>Website</strong></a> · 

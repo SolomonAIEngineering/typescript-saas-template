@@ -27,6 +27,7 @@
     "gateway:format": "cd services/gateway && bun run format:check || (bun run format && return 1) && cd ../../"
   },
   "lint-staged": {
+    "*": ["biome format --write"],
     "**/*.{md,mdx}": ["bun run lint:md"]
   },
   "config": {
