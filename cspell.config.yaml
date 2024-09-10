@@ -11,6 +11,7 @@ ignorePaths:
   - package-lock.json
   - package.json
   - services
+  - 
 words:
   - Buildx
   - rerank
