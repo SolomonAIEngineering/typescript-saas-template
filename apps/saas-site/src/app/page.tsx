@@ -1,3 +1,4 @@
+import dynamic from "next/dynamic";
 import Blog from "@/components/sections/blog";
 import CTA from "@/components/sections/cta";
 import FAQ from "@/components/sections/faq";
@@ -10,26 +11,30 @@ import Logos from "@/components/sections/logos";
 import Pricing from "@/components/sections/pricing";
 import Problem from "@/components/sections/problem";
 import Solution from "@/components/sections/solution";
-import Testimonials from "@/components/sections/testimonials";
 import TestimonialsCarousel from "@/components/sections/testimonials-carousel";
+
+const Testimonials = dynamic(
+  () => import("@/components/sections/testimonials"),
+  { ssr: false },
+);
 
 export default function Home() {
   return (
-    <main>
+    <>
       <Header />
       <Hero />
-      <Logos />
       <Problem />
       <Solution />
-      <HowItWorks />
-      <TestimonialsCarousel />
-      <Features />
       <Testimonials />
+      <HowItWorks />
+      {/* Remove or comment out this line */}
+      {/* <TestimonialsCarousel /> */}
+      <Features />
       <Pricing />
       <FAQ />
       <Blog />
       <CTA />
       <Footer />
-    </main>
+    </>
   );
 }

@@ -6,12 +6,18 @@ import { RiInstagramFill } from "react-icons/ri";
 export const BLUR_FADE_DELAY = 0.15;
 
 export const siteConfig = {
-  name: "startup.ai",
-  description: "Automate your workflow with AI",
+  name: "Vector",
+  description: "Build fintech products in 3 days or less",
   url: process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000",
-  keywords: ["SaaS", "Template", "Next.js", "React", "Tailwind CSS"],
+  keywords: [
+    "Fintech",
+    "Developer Platform",
+    "Financial Institutions",
+    "Rapid Development",
+    "Cost-Effective",
+  ],
   links: {
-    email: "support@startup.ai",
+    email: "support@vector.ai",
     twitter: "https://twitter.com/magicuidesign",
     discord: "https://discord.gg/87p2vpsat5",
     github: "https://github.com/magicuidesign/magicui",
@@ -19,29 +25,31 @@ export const siteConfig = {
   },
   header: [
     {
-      trigger: "Features",
+      trigger: "Products",
       content: {
         main: {
           icon: <Icons.logo className="h-6 w-6" />,
-          title: "AI-Powered Automation",
-          description: "Streamline your workflow with intelligent automation.",
+          title: "Fintech Solutions",
+          description: "Build and launch financial products rapidly.",
           href: "#",
         },
         items: [
           {
             href: "#",
-            title: "Task Automation",
-            description: "Automate repetitive tasks and save time.",
+            title: "Digital Banking Platform",
+            description: "Launch a full-featured digital bank in days.",
           },
           {
             href: "#",
-            title: "Workflow Optimization",
-            description: "Optimize your processes with AI-driven insights.",
+            title: "Embedded Financial Analytics",
+            description:
+              "Integrate powerful analytics directly into your fintech apps.",
           },
           {
             href: "#",
-            title: "Intelligent Scheduling",
-            description: "AI-powered scheduling for maximum efficiency.",
+            title: "Secure Storage API",
+            description:
+              "Store and manage financial files with bank-level security.",
           },
         ],
       },
@@ -51,35 +59,36 @@ export const siteConfig = {
       content: {
         items: [
           {
-            title: "For Small Businesses",
+            title: "Neobanks",
             href: "#",
-            description: "Tailored automation solutions for growing companies.",
+            description: "Launch fully digital banking services in days.",
           },
           {
-            title: "Enterprise",
-            href: "#",
-            description: "Scalable AI automation for large organizations.",
-          },
-          {
-            title: "Developers",
-            href: "#",
-            description: "API access and integration tools for developers.",
-          },
-          {
-            title: "Healthcare",
-            href: "#",
-            description: "Specialized automation for healthcare workflows.",
-          },
-          {
-            title: "Finance",
-            href: "#",
-            description: "AI-driven process automation for financial services.",
-          },
-          {
-            title: "Education",
+            title: "Payment Platforms",
             href: "#",
             description:
-              "Streamline administrative tasks in educational institutions.",
+              "Build secure and scalable payment processing systems.",
+          },
+          {
+            title: "Lending & Credit",
+            href: "#",
+            description:
+              "Develop automated lending and credit scoring solutions.",
+          },
+          {
+            title: "Investment & Trading",
+            href: "#",
+            description: "Create robo-advisors and trading platforms quickly.",
+          },
+          {
+            title: "Regtech & Compliance",
+            href: "#",
+            description: "Implement robust compliance and reporting systems.",
+          },
+          {
+            title: "Open Banking",
+            href: "#",
+            description: "Build APIs for secure data sharing and integration.",
           },
         ],
       },
@@ -91,107 +100,113 @@ export const siteConfig = {
   ],
   pricing: [
     {
-      name: "BASIC",
+      name: "STARTER",
       href: "#",
-      price: "$19",
+      price: "$999",
       period: "month",
-      yearlyPrice: "$16",
+      yearlyPrice: "$899",
       features: [
-        "1 User",
-        "5GB Storage",
-        "Basic Support",
-        "Limited API Access",
-        "Standard Analytics",
+        "1 Fintech Product",
+        "Up to 10,000 Users",
+        "Basic Compliance Tools",
+        "Standard API Access",
+        "Email Support",
       ],
-      description: "Perfect for individuals and small projects",
-      buttonText: "Subscribe",
+      description: "Perfect for fintech startups and small projects",
+      buttonText: "Get Started",
       isPopular: false,
     },
     {
-      name: "PRO",
+      name: "GROWTH",
       href: "#",
-      price: "$49",
+      price: "$2,999",
       period: "month",
-      yearlyPrice: "$40",
+      yearlyPrice: "$2,699",
       features: [
-        "5 Users",
-        "50GB Storage",
-        "Priority Support",
+        "3 Fintech Products",
+        "Up to 100,000 Users",
+        "Advanced Compliance Suite",
         "Full API Access",
-        "Advanced Analytics",
+        "Priority Support",
+        "Custom Integrations",
       ],
-      description: "Ideal for growing businesses and teams",
-      buttonText: "Subscribe",
+      description: "Ideal for growing fintech companies",
+      buttonText: "Scale Up",
       isPopular: true,
     },
     {
       name: "ENTERPRISE",
       href: "#",
-      price: "$99",
+      price: "Custom",
       period: "month",
-      yearlyPrice: "$82",
+      yearlyPrice: "Custom",
       features: [
+        "Unlimited Fintech Products",
         "Unlimited Users",
-        "500GB Storage",
+        "Enterprise-grade Compliance",
+        "Dedicated API Support",
         "24/7 Premium Support",
-        "Custom Integrations",
-        "AI-Powered Insights",
+        "Custom Development",
+        "On-premises Deployment Option",
       ],
-      description: "For large-scale operations and high-volume users",
-      buttonText: "Subscribe",
+      description: "For large financial institutions and enterprises",
+      buttonText: "Contact Sales",
       isPopular: false,
     },
   ],
   faqs: [
     {
-      question: "What is acme.ai?",
+      question: "What is Vector?",
       answer: (
         <span>
-          acme.ai is a platform that helps you build and manage your AI-powered
-          applications. It provides tools and services to streamline the
-          development and deployment of AI solutions.
+          Vector is a developer platform that helps financial institutions build
+          fintech products in 3 days or less at a fraction of the cost. It
+          provides tools, APIs, and templates to accelerate fintech development.
         </span>
       ),
     },
     {
-      question: "How can I get started with acme.ai?",
+      question: "How can Vector help my financial institution?",
       answer: (
         <span>
-          You can get started with acme.ai by signing up for an account on our
-          website, creating a new project, and following our quick-start guide.
-          We also offer tutorials and documentation to help you along the way.
+          Vector accelerates your fintech product development by providing
+          pre-built components, easy API integrations, and compliance tools.
+          This allows you to launch new financial products quickly and
+          cost-effectively.
         </span>
       ),
     },
     {
-      question: "What types of AI models does acme.ai support?",
+      question: "What types of fintech products can I build with Vector?",
       answer: (
         <span>
-          acme.ai supports a wide range of AI models, including but not limited
-          to natural language processing, computer vision, and predictive
-          analytics. We continuously update our platform to support the latest
-          AI technologies.
+          With Vector, you can build a wide range of fintech products including
+          digital banking platforms, payment processing systems, lending
+          solutions, wealth management tools, and more. Our platform is flexible
+          to accommodate various financial service needs.
         </span>
       ),
     },
     {
-      question: "Is acme.ai suitable for beginners in AI development?",
+      question:
+        "Is Vector suitable for both startups and established financial institutions?",
       answer: (
         <span>
-          Yes, acme.ai is designed to be user-friendly for both beginners and
-          experienced developers. We offer intuitive interfaces, pre-built
-          templates, and extensive learning resources to help users of all skill
-          levels create AI-powered applications.
+          Yes, Vector is designed to cater to both fintech startups and
+          established financial institutions. Our platform scales to meet the
+          needs of small teams and large enterprises alike, providing the tools
+          necessary for rapid fintech innovation.
         </span>
       ),
     },
     {
-      question: "What kind of support does acme.ai provide?",
+      question: "How does Vector ensure compliance and security?",
       answer: (
         <span>
-          acme.ai provides comprehensive support including documentation, video
-          tutorials, a community forum, and dedicated customer support. We also
-          offer premium support plans for enterprises with more complex needs.
+          Vector incorporates built-in compliance tools and security features
+          that adhere to financial industry standards. We regularly update our
+          platform to meet changing regulations and provide robust security
+          measures to protect sensitive financial data.
         </span>
       ),
     },
@@ -249,3 +264,7 @@ export const siteConfig = {
 };
 
 export type SiteConfig = typeof siteConfig;
+
+export const featureFlags = {
+  showTestimonials: true,
+};

@@ -1,25 +1,25 @@
 import BlurFade from "@/components/magicui/blur-fade";
 import Section from "@/components/section";
 import { Card, CardContent } from "@/components/ui/card";
-import { Brain, Shield, Zap } from "lucide-react";
+import { Clock, DollarSign, Shield } from "lucide-react";
 
 const problems = [
   {
-    title: "Data Overload",
+    title: "Time-to-Market Pressure",
     description:
-      "Businesses struggle to make sense of vast amounts of complex data, missing out on valuable insights that could drive growth and innovation.",
-    icon: Brain,
+      "Financial institutions often take months to launch new products, falling behind in a fast-paced market.",
+    icon: Clock,
   },
   {
-    title: "Slow Decision-Making",
+    title: "Data Provider Costs",
     description:
-      "Traditional data processing methods are too slow, causing businesses to lag behind market changes and miss crucial opportunities.",
-    icon: Zap,
+      "Negotiating prices with multiple data providers is time-consuming and can lead to inflated costs.",
+    icon: DollarSign,
   },
   {
-    title: "Data Security Concerns",
+    title: "Compliance Challenges",
     description:
-      "With increasing cyber threats, businesses worry about the safety of their sensitive information when adopting new technologies.",
+      "Ensuring backend systems meet strict financial regulations is complex and resource-intensive.",
     icon: Shield,
   },
 ];
@@ -27,8 +27,8 @@ const problems = [
 export default function Component() {
   return (
     <Section
-      title="Problem"
-      subtitle="Manually entering your data is a hassle."
+      title="Industry Challenges"
+      subtitle="Building compliant fintech products quickly is difficult and expensive."
     >
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
         {problems.map((problem, index) => (

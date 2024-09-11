@@ -6,6 +6,8 @@ import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import { Star } from "lucide-react";
 import Image from "next/image";
+import { featureFlags } from "@/lib/config";
+import TestimonialsCarousel from "./testimonials-carousel";
 
 export const Highlight = ({
   children,
@@ -266,46 +268,25 @@ const testimonials = [
 ];
 
 export default function Testimonials() {
+  const showTestimonials = process.env.NEXT_PUBLIC_SHOW_TESTIMONIALS === "true";
+
+  if (!showTestimonials) {
+    return null;
+  }
+
   return (
-    <Section
-      title="Testimonials"
-      subtitle="What our customers are saying"
-      className="max-w-8xl"
-    >
-      <div className="relative mt-6 max-h-screen overflow-hidden">
-        <div className="gap-4 md:columns-2 xl:columns-3 2xl:columns-4">
-          {Array(Math.ceil(testimonials.length / 3))
-            .fill(0)
-            .map((_, i) => (
-              <Marquee
-                vertical
-                key={i}
-                className={cn({
-                  "[--duration:60s]": i === 1,
-                  "[--duration:30s]": i === 2,
-                  "[--duration:70s]": i === 3,
-                })}
-              >
-                {testimonials.slice(i * 3, (i + 1) * 3).map((card, idx) => (
-                  <motion.div
-                    key={idx}
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    viewport={{ once: true }}
-                    transition={{
-                      delay: Math.random() * 0.8,
-                      duration: 1.2,
-                    }}
-                  >
-                    <TestimonialCard {...card} />
-                  </motion.div>
-                ))}
-              </Marquee>
-            ))}
+    <section className="bg-background py-24 sm:py-32">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto max-w-xl text-center">
+          <h2 className="text-lg font-semibold leading-8 tracking-tight text-primary">
+            Testimonials
+          </h2>
+          <p className="mt-2 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+            Trusted by Fintech Leaders
+          </p>
         </div>
-        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/4 w-full bg-gradient-to-t from-background from-20%"></div>
-        <div className="pointer-events-none absolute inset-x-0 top-0 h-1/4 w-full bg-gradient-to-b from-background from-20%"></div>
+        <TestimonialsCarousel />
       </div>
-    </Section>
+    </section>
   );
 }

@@ -9,38 +9,36 @@ import { motion } from "framer-motion";
 
 const features = [
   {
-    title: "Advanced AI Algorithms",
+    title: "Rapid Development Platform",
     description:
-      "Our platform utilizes cutting-edge AI algorithms to provide accurate and efficient solutions for your business needs.",
-    className: "hover:bg-red-500/10 transition-all duration-500 ease-out",
-    content: (
-      <>
-        <Safari
-          src={`/dashboard.png`}
-          url="https://acme.ai"
-          className="-mb-32 mt-4 max-h-64 w-full px-4 select-none drop-shadow-[0_0_28px_rgba(0,0,0,.1)] group-hover:translate-y-[-10px] transition-all duration-300"
-        />
-      </>
-    ),
-  },
-  {
-    title: "Secure Data Handling",
-    description:
-      "We prioritize your data security with state-of-the-art encryption and strict privacy protocols, ensuring your information remains confidential.",
-    className:
-      "order-3 xl:order-none hover:bg-blue-500/10 transition-all duration-500 ease-out",
+      "Build and launch fintech products in days, not months, with our pre-built components and templates.",
+    className: "hover:bg-blue-500/10 transition-all duration-500 ease-out",
     content: (
       <Safari
         src={`/dashboard.png`}
-        url="https://acme.ai"
+        url="https://vector.ai"
         className="-mb-32 mt-4 max-h-64 w-full px-4 select-none drop-shadow-[0_0_28px_rgba(0,0,0,.1)] group-hover:translate-y-[-10px] transition-all duration-300"
       />
     ),
   },
   {
-    title: "Seamless Integration",
+    title: "Integrated Data Providers",
     description:
-      "Easily integrate our AI solutions into your existing workflows and systems for a smooth and efficient operation.",
+      "Access multiple financial data sources through a single API, eliminating the need for separate negotiations and integrations.",
+    className:
+      "order-3 xl:order-none hover:bg-green-500/10 transition-all duration-500 ease-out",
+    content: (
+      <Safari
+        src={`/dashboard.png`}
+        url="https://vector.ai"
+        className="-mb-32 mt-4 max-h-64 w-full px-4 select-none drop-shadow-[0_0_28px_rgba(0,0,0,.1)] group-hover:translate-y-[-10px] transition-all duration-300"
+      />
+    ),
+  },
+  {
+    title: "Compliant Backend Infrastructure",
+    description:
+      "Build on our secure and compliant backend, designed to meet strict financial regulations out of the box.",
     className:
       "md:row-span-2 hover:bg-orange-500/10 transition-all duration-500 ease-out",
     content: (
@@ -57,24 +55,24 @@ const features = [
         />
         <Safari
           src={`/dashboard.png`}
-          url="https://acme.ai"
+          url="https://vector.ai"
           className="-mb-48 ml-12 mt-16 h-full px-4 select-none drop-shadow-[0_0_28px_rgba(0,0,0,.1)] group-hover:translate-x-[-10px] transition-all duration-300"
         />
       </>
     ),
   },
   {
-    title: "Customizable Solutions",
+    title: "Customizable Fintech Solutions",
     description:
-      "Tailor our AI services to your specific needs with flexible customization options, allowing you to get the most out of our platform.",
+      "Tailor our platform to your specific fintech needs, from digital banking to payment processing and beyond.",
     className:
-      "flex-row order-4 md:col-span-2 md:flex-row xl:order-none hover:bg-green-500/10 transition-all duration-500 ease-out",
+      "flex-row order-4 md:col-span-2 md:flex-row xl:order-none hover:bg-purple-500/10 transition-all duration-500 ease-out",
     content: (
       <>
         <Ripple className="absolute -bottom-full" />
         <Safari
           src={`/dashboard.png`}
-          url="https://acme.ai"
+          url="https://vector.ai"
           className="-mb-32 mt-4 max-h-64 w-full px-4 select-none drop-shadow-[0_0_28px_rgba(0,0,0,.1)] group-hover:translate-y-[-10px] transition-all duration-300"
         />
       </>
@@ -86,8 +84,8 @@ export default function Component() {
   return (
     <Section
       title="Solution"
-      subtitle="Empower Your Business with AI Workflows"
-      description="Generic AI tools won't suffice. Our platform is purpose-built to provide exceptional AI-driven solutions for your unique business needs."
+      subtitle="Build Fintech Products at Lightning Speed"
+      description="Vector provides a comprehensive platform with a compliant backend for financial institutions to develop and launch fintech products in record time."
       className="bg-neutral-100 dark:bg-neutral-900"
     >
       <div className="mx-auto mt-16 grid max-w-sm grid-cols-1 gap-6 text-gray-500 md:max-w-3xl md:grid-cols-2 xl:grid-rows-2 md:grid-rows-3 xl:max-w-6xl xl:auto-rows-fr xl:grid-cols-3">
