@@ -24,7 +24,11 @@
     "typecheck": "turbo typecheck",
     "prepare": "husky",
     "gen": "turbo gen --config 'turbo/generator/config.ts'",
-    "gateway:format": "cd services/gateway && bun run format:check || (bun run format && return 1) && cd ../../"
+    "gateway:format": "cd services/gateway && bun run format:check || (bun run format && return 1) && cd ../../",
+    "saas-site": "turbo dev --filter=@v1/saas-site",
+    "startup-site": "turbo dev --filter=@v1/startup-site",
+    "web": "turbo dev --filter=@v1/web",
+    "app": "turbo dev --filter=@v1/app"
   },
   "lint-staged": {
     "**/*.{md,mdx}": ["bun run lint:md"]
